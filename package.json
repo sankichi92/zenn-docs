@@ -1,0 +1,9 @@
+{
+  "repository": "https://github.com/sankichi92/zenn-docs.git",
+  "author": "Takahiro Miyoshi <takahiro-miyoshi@sankichi.net>",
+  "license": "CC-BY-4.0",
+  "private": true,
+  "devDependencies": {
+    "zenn-cli": "^0.1.117"
+  }
+}
