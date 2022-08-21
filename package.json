@@ -3,6 +3,9 @@
   "author": "Takahiro Miyoshi <takahiro-miyoshi@sankichi.net>",
   "license": "CC-BY-4.0",
   "private": true,
+  "scripts": {
+    "preview": "zenn preview"
+  },
   "devDependencies": {
     "zenn-cli": "^0.1.117"
   }
