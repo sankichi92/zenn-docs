@@ -4,7 +4,8 @@
   "license": "CC-BY-4.0",
   "private": true,
   "scripts": {
-    "preview": "zenn preview"
+    "preview": "zenn preview",
+    "lint": "textlint articles books"
   },
   "devDependencies": {
     "textlint": "^12.2.1",
