@@ -17,8 +17,7 @@ $ pip install tellus-traveler
 ## API トークンをセットする
 
 `tellus-traveler` は [Tellus Satellite Data Traveler API](https://www.tellusxdp.com/docs/travelers/) を利用します。
-この API の利用には API 
-トークンが必要なため、Tellus にログインし、https://www.tellusxdp.com/account/setting/api-access/ で発行したトークンを `tellus_traveler.api_key` に代入してください。
+この API の利用には API トークンが必要なため、Tellus にログインし、https://www.tellusxdp.com/account/setting/api-access/ で発行したトークンを `tellus_traveler.api_key` に代入してください。
 
 ```py
 import tellus_traveler
@@ -119,7 +118,7 @@ JAXA の筑波宇宙センターがある茨城県つくば市を観測した AV
 「だいち」が運用停止した2011年4月を対象にします。
 
 まず、つくば市の緯度経度の範囲（Bounding Box）を[国土数値情報ダウンロードサイト](https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N03-v3_1.html)から取得します。
-ここでは、[GeoPandas](https://geopandas.org/) を利用しています。
+次のコードでは [GeoPandas](https://geopandas.org/) を利用しています。
 
 ```py
 import geopandas as gpd
@@ -171,7 +170,7 @@ pprint.pp(scenes)
 ```
 
 検索結果のシーンは [GeoJSON](https://geojson.org/) の Feature 型になっています。
-これは、属性 [`__geo_interface__`](https://gist.github.com/sgillies/2217756) で確認できます。
+属性 [`__geo_interface__`](https://gist.github.com/sgillies/2217756) で内容を確認できます。
 
 ```py
 pprint.pp(scenes[0].__geo_interface__)
@@ -219,7 +218,7 @@ map
 
 ![geopandas.GeoDataFrame.explore の結果](/images/2023-09-11_tellus-traveler/search_results_folium.png)
 
-以下では、もっともつくば市を含む範囲が広い `ALAV2A277442870` を使うことにします。
+以降は、もっともつくば市を含む範囲が広い `ALAV2A277442870` を使うことにします。
 
 ```py
 scene = next(scene for scene in scenes if scene["tellus:name"] == "ALAV2A277442870")
@@ -331,7 +330,7 @@ thumbs[0].url()
 
 ![ALAV2A277442870_thumb](/images/2023-09-11_tellus-traveler/ALAV2A277442870-OORIRFU-D067P3-20110410-002_thumb.png)
 
-次に、Tellus が使いやすいように整形した [Cloud Optimized GeoTIFF](https://www.cogeo.org/) (COG) 形式のファイルを読み込んでみます。
+次に、使いやすいように整形された [Cloud Optimized GeoTIFF](https://www.cogeo.org/) (COG) 形式のファイルを読み込んでみます。
 読み込みには GeoTIFF ファイルを `xarray.DataArray` として読み込むことのできる [rioxarray](https://corteva.github.io/rioxarray/) を使用します。
 
 ```py
@@ -358,7 +357,7 @@ Attributes:
     add_offset:                0.0
 ```
 
-さらに、つくば市の範囲でデータを絞り込みます。
+さらに、つくば市の範囲でデータをトリミングします。
 
 ```py
 clipped_data = data.rio.clip_box(*tsukuba_bbox)
