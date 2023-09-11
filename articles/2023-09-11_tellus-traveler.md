@@ -386,7 +386,7 @@ Attributes:
 ```py
 import matplotlib.pyplot as plt
 
-fig, ax = plt.subplots(figsize=(12, 12))
+fig, ax = plt.subplots(figsize=(11, 11))
 clipped_data.sel(band=[1, 2, 3]).astype('uint8').plot.imshow(ax=ax)
 tsukuba_gdf.plot(ax=ax, color="none")
 ax.set_title(f"Tsukuba True Color\n{scene['tellus:name']}")
@@ -399,7 +399,7 @@ AVNIR-2 には近赤外のバンドもあります。
 R にバンド4（近赤外）、G にバンド1、B にバンド2を割り当てた [False Color 画像](https://ja.wikipedia.org/wiki/衛星画像#フォールスカラー合成)を表示します。
 
 ```py
-fig, ax = plt.subplots(figsize=(12, 12))
+fig, ax = plt.subplots(figsize=(11, 11))
 clipped_data.sel(band=[4, 1, 2]).astype('uint8').plot.imshow(ax=ax)
 tsukuba_gdf.plot(ax=ax, color="none")
 ax.set_title(f"Tsukuba False Color\n{scene['tellus:name']}")
