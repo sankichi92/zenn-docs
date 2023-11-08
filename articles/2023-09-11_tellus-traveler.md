@@ -142,7 +142,7 @@ search = tellus_traveler.search(
     start_datetime="2011-04-01T00:00:00Z",
     end_datetime="2012-05-01T00:00:00Z",
 )
-pprint.pp(tsukuba_bbox)
+pprint.pp(search.total())
 ```
 
 ```:出力
