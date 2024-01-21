@@ -50,6 +50,11 @@ crates-io:      https://crates.io/search?q=hoge
 ```
 
 実行すると、標準出力に設定ファイルのパスが表示されるので、当該ファイルを編集してください。
+
+```console
+$ $EDITOR '/Users/sankichi92/Library/Application Support/rs.search-once/default-config.yml'
+```
+
 上記は macOS の例で、デフォルトの設定ファイルのパスは OS によって異なります。
 
 設定ファイルのフォーマットは、以下のような YAML です。
