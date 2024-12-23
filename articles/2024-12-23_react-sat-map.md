@@ -16,7 +16,7 @@ https://github.com/sankichi92/react-sat-map
 
 ## デモ
 
-はじめに、react-sat-map のデモページをご覧ください。
+はじめに、react-sat-map がどんなものかデモページをご覧ください。
 https://sankichi92.github.io/react-sat-map/
 
 以下はスクリーンショットのため動かないですが、実際のデモページでは衛星をクリックしたり、地図を拡大・縮小したりして、衛星の名前や実際の動きを確認できます。
@@ -91,7 +91,7 @@ TLE の内容はここでは説明しません[^2]が、衛星は TLE で表現�
 [^2]: TLE についてはつぎのページがわかりやすいです: https://lizard-tail.com/isana/tle/misc/what_is_tle
 [^3]: 実際には外乱により軌道は刻々と変化していくので、TLE は日々更新されます。
 
-[satellite.js](https://github.com/shashwatak/satellite-js) は、SGP4 の JavaScript 実装です。以下のようにして ISS の現在の緯度経度を計算できます。
+[satellite.js](https://github.com/shashwatak/satellite-js) は、SGP4 の JavaScript 実装です。以下のようにして TLE と時刻から緯度経度を計算できます。
 
 ```javascript
 import * as satellite from "satellite.js";
@@ -174,4 +174,4 @@ export function SatelliteMarkers({ satellites }) {
 - [satvis](https://github.com/Flowm/satvis)
 - [KeepTrack](https://github.com/thkruz/keeptrack.space)
 
-ただ、MapLibre GL JS をつかったシンプルなものが見当たらなかったので、つくってみました。今後余力があれば、上記 OSS に共通するような主要な機能を追加していきたいです。
+ただ、2 次元の Web 地図上にシンプルに表示するものが見当たらなかったのでつくってみました。今後余力があれば、上記 OSS に共通するような主要な機能を追加していきたいです。
