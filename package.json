@@ -11,7 +11,7 @@
     "textlint": "^14.8.4",
     "textlint-filter-rule-comments": "^1.2.2",
     "textlint-rule-preset-ja-technical-writing": "^12.0.2",
-    "zenn-cli": "^0.1.161"
+    "zenn-cli": "^0.1.162"
   },
   "packageManager": "pnpm@10.12.1+sha512.f0dda8580f0ee9481c5c79a1d927b9164f2c478e90992ad268bbb2465a736984391d6333d2c327913578b2804af33474ca554ba29c04a8b13060a717675ae3ac",
   "volta": {
